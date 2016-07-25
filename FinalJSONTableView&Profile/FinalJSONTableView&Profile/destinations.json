@@ -1,0 +1,21 @@
+{
+  "destinations": [
+  {
+    "name": "Zion National Park",
+    "description": "This is a really cool park.",
+    "images": [
+               {
+                    "imageName":"zion_1"
+               },
+               {
+                    "imageName":"zion_2"
+               }
+    ],
+    "contactInformation": "Address.",
+    "specialInformation": "Special.",
+    "category": "Park",
+    "latitude": 111.11,
+    "longitude": 44.44,
+    "charge": 25.00
+  }]
+}

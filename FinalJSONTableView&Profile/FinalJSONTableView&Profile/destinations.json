@@ -2,20 +2,59 @@
   "destinations": [
   {
     "name": "Zion National Park",
-    "description": "This is a really cool park.",
+    "description": "Zion National Park is located in the Southwestern United States, near Springdale, Utah. A prominent feature of the 229-square-mile (590 km2) park is Zion Canyon, which is 15 miles (24 km) long and up to half a mile (800 m) deep, cut through the reddish and tan-colored Navajo Sandstone by the North Fork of the Virgin River. The lowest elevation is 3,666 ft (1,117 m) at Coalpits Wash and the highest elevation is 8,726 ft (2,660 m) at Horse Ranch Mountain. Located at the junction of the Colorado Plateau, Great Basin, and Mojave Desert regions, the park's unique geography and variety of life zones allow for unusual plant and animal diversity. Numerous plant species as well as 289 species of birds, 75 mammals (including 19 species of bat), and 32 reptiles inhabit the park's four life zones: desert, riparian, woodland, and coniferous forest. Zion National Park includes mountains, canyons, buttes, mesas, monoliths, rivers, slot canyons, and natural arches.",
     "images": [
                {
                     "imageName":"zion_1"
                },
                {
                     "imageName":"zion_2"
+               },
+               {
+                    "imageName":"zion_3"
+               },
+               {
+                    "imageName":"zion_4"
+               },
+               {
+                    "imageName":"zion_5"
+               },
+               {
+                    "imageName":"zion_6"
+               },
+               {
+                    "imageName":"zion_7"
+               },
+               {
+                    "imageName":"zion_8"
+               },
+               {
+                    "imageName":"zion_9"
+               },
+               {
+                    "imageName":"zion_10"
+               },
+               {
+                    "imageName":"zion_11"
+               },
+               {
+                    "imageName":"zion_12"
+               },
+               {
+                    "imageName":"zion_13"
+               },
+               {
+                    "imageName":"zion_14"
+               },
+               {
+                    "imageName":"zion_15"
                }
     ],
-    "contactInformation": "Address.",
-    "specialInformation": "Special.",
+    "contactInformation": "Park Website",
+    "specialInformation": "Summer temperatures in Zion's can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime.",
     "category": "Park",
-    "latitude": 111.11,
-    "longitude": 44.44,
-    "charge": 25.00
+    "latitude": 112.59,
+    "longitude": 37.12,
+    "charge": "$25.00 per car per week.",
   }]
 }

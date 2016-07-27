@@ -18,7 +18,7 @@ class Destination: NSObject {
     var category: String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
-    var charge: Double = 0.0
+    var charge: String = ""
     
     override init() {
         
@@ -29,7 +29,7 @@ class Destination: NSObject {
         self.category = ""
         self.latitude = 0.0
         self.longitude = 0.0
-        self.charge = 0.0
+        self.charge = ""
         
     }
 

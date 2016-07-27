@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var destinationsArray = [Destination]()
+    var favDestination = Destination()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     typealias JSONDictionary = [String:AnyObject]
     typealias JSONArray = [JSONDictionary]
     
@@ -100,7 +105,7 @@ class ViewController: UIViewController {
                                     print("I couldn't parse the longitude.")
                                 }
                                 
-                                if let charge = destinationsDict["charge"] as? Double {
+                                if let charge = destinationsDict["charge"] as? String {
                                     
                                     theDestination.charge = charge
                                 } else {
@@ -140,6 +145,45 @@ class ViewController: UIViewController {
                 
             }
             
+        }
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.destinationArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FavTableViewCell
+        
+        let destination = self.destinationArray[indexPath.row]
+        
+//        cell.featureImageView.image = UIImage(named: "zion_1")
+        
+//        cell.imageView?.image = UIImage(named:"zion_1.jpg")
+        
+        cell.nameLabel.text = destination.name
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("ProfileSegue", sender: nil)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ProfileSegue" {
+            
+//            if let controller = segue.destinationViewController as? ProfileViewController {
+//                controller.theDog = self.currentDog
+//                
+//            } else {
+//                print("Not the correct segue")
+//            }
         }
         
     }

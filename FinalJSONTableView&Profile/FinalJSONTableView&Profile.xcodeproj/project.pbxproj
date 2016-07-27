@@ -13,7 +13,8 @@
 		D89DAF021D469E380021987F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89DAF001D469E380021987F /* LaunchScreen.storyboard */; };
 		D89DAF0A1D469E6B0021987F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF091D469E6B0021987F /* ViewController.swift */; };
 		D89DAF0C1D469E850021987F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF0B1D469E850021987F /* Destination.swift */; };
-		D89DAF0E1D469EA00021987F /* destinations.json in Resources */ = {isa = PBXBuildFile; fileRef = D89DAF0D1D469EA00021987F /* destinations.json */; };
+		D89DAF101D46AFEE0021987F /* destinations.json in Resources */ = {isa = PBXBuildFile; fileRef = D89DAF0F1D46AFEE0021987F /* destinations.json */; };
+		D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF131D4804F80021987F /* FavTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		D89DAF031D469E380021987F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D89DAF091D469E6B0021987F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D89DAF0B1D469E850021987F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
-		D89DAF0D1D469EA00021987F /* destinations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = destinations.json; sourceTree = "<group>"; };
+		D89DAF0F1D46AFEE0021987F /* destinations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = destinations.json; sourceTree = "<group>"; };
+		D89DAF131D4804F80021987F /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,39 @@
 			children = (
 				D89DAEF71D469E380021987F /* AppDelegate.swift */,
 				D89DAEFB1D469E380021987F /* Main.storyboard */,
-				D89DAF0B1D469E850021987F /* Destination.swift */,
-				D89DAF091D469E6B0021987F /* ViewController.swift */,
+				D8FB0B8B1D485F3D006BD700 /* View */,
+				D89DAF121D4804B10021987F /* Models */,
+				D89DAF111D48049A0021987F /* Controllers */,
 				D89DAEFE1D469E380021987F /* Assets.xcassets */,
-				D89DAF0D1D469EA00021987F /* destinations.json */,
 				D89DAF001D469E380021987F /* LaunchScreen.storyboard */,
+				D89DAF0F1D46AFEE0021987F /* destinations.json */,
 				D89DAF031D469E380021987F /* Info.plist */,
 			);
 			path = "FinalJSONTableView&Profile";
+			sourceTree = "<group>";
+		};
+		D89DAF111D48049A0021987F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D89DAF091D469E6B0021987F /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D89DAF121D4804B10021987F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D89DAF0B1D469E850021987F /* Destination.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D8FB0B8B1D485F3D006BD700 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D89DAF131D4804F80021987F /* FavTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +157,7 @@
 			files = (
 				D89DAF021D469E380021987F /* LaunchScreen.storyboard in Resources */,
 				D89DAEFF1D469E380021987F /* Assets.xcassets in Resources */,
-				D89DAF0E1D469EA00021987F /* destinations.json in Resources */,
+				D89DAF101D46AFEE0021987F /* destinations.json in Resources */,
 				D89DAEFD1D469E380021987F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D89DAF0A1D469E6B0021987F /* ViewController.swift in Sources */,
+				D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */,
 				D89DAEF81D469E380021987F /* AppDelegate.swift in Sources */,
 				D89DAF0C1D469E850021987F /* Destination.swift in Sources */,
 			);
@@ -294,6 +322,7 @@
 				D89DAF081D469E380021987F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

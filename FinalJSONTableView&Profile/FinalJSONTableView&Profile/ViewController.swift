@@ -178,12 +178,6 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProfileSegue" {
             
-//            if let controller = segue.destinationViewController as? ProfileViewController {
-//                controller.theDog = self.currentDog
-//                
-//            } else {
-//                print("Not the correct segue")
-//            }
         }
         
     }

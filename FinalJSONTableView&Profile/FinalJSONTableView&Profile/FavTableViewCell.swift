@@ -11,7 +11,6 @@ import UIKit
 class FavTableViewCell: UITableViewCell {
 
     @IBOutlet weak var featureImageView: UIImageView!
-
     @IBOutlet weak var nameLabel: UILabel!
 
 }

@@ -20,6 +20,10 @@ class Destination: NSObject {
     var longitude: Double = 0.0
     var charge: String = ""
     
+    var image : UIImage {
+        return UIImage(named: self.imagesArray[0])!
+    }
+    
     override init() {
         
         self.name = ""

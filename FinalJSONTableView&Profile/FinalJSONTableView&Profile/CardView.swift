@@ -11,15 +11,15 @@ import UIKit
 class CardView: UIView {
     var destination : Destination! {
         didSet {
-//            imageView.image = dog.image
-//            nameLabel.text = dog.name
-//            ageLabel.text = dog.age
+            
+            imageView.image = destination.image
+            nameLabel.text = destination.name
+
         }
     }
     
     let imageView = UIImageView()
     let nameLabel = UILabel()
-    let ageLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,7 +34,7 @@ class CardView: UIView {
     func defaultInit() {
         self.backgroundColor = UIColor.whiteColor()
         
-        for v in [imageView, nameLabel, ageLabel] {
+        for v in [imageView, nameLabel] {
             v.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(v)
         }
@@ -50,18 +50,9 @@ class CardView: UIView {
         NSLayoutConstraint(item: nameLabel, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1, constant: 7).active = true
         NSLayoutConstraint(item: nameLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0).active = true
         
-        //Age
-        NSLayoutConstraint(item: ageLabel, attribute: .Top, relatedBy: .Equal, toItem: imageView, attribute: .Bottom, multiplier: 1, constant: 0).active = true
-        NSLayoutConstraint(item: ageLabel, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: -7).active = true
-        NSLayoutConstraint(item: ageLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0).active = true
-        
         nameLabel.font = UIFont(name: "Futura", size: 24)
         nameLabel.textColor = UIColor.blackColor()
         nameLabel.textAlignment = .Left
-        
-        ageLabel.font = UIFont(name: "Futura", size: 18)
-        ageLabel.textColor = UIColor.blackColor()
-        ageLabel.textAlignment = .Right
         
         self.layer.cornerRadius = 10
         self.clipsToBounds = true

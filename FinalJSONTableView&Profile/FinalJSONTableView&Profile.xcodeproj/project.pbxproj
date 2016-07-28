@@ -20,6 +20,7 @@
 		D8FB0BC21D4A732B006BD700 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC11D4A732B006BD700 /* CardView.swift */; };
 		D8FB0BC41D4A95FF006BD700 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC31D4A95FF006BD700 /* ProfileViewController.swift */; };
 		D8FB0BC61D4AA064006BD700 /* CardStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC51D4AA064006BD700 /* CardStackViewController.swift */; };
+		D8FB0BC81D4AB7A7006BD700 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC71D4AB7A7006BD700 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D8FB0BC11D4A732B006BD700 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D8FB0BC31D4A95FF006BD700 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D8FB0BC51D4AA064006BD700 /* CardStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackViewController.swift; sourceTree = "<group>"; };
+		D8FB0BC71D4AB7A7006BD700 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D89DAEF71D469E380021987F /* AppDelegate.swift */,
+				D8FB0BC71D4AB7A7006BD700 /* Constants.swift */,
 				D89DAEFB1D469E380021987F /* Main.storyboard */,
 				D8FB0B8B1D485F3D006BD700 /* View */,
 				D89DAF121D4804B10021987F /* Models */,
@@ -189,6 +192,7 @@
 				D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */,
 				D8FB0BC01D4A6D6D006BD700 /* CardStack.swift in Sources */,
 				D89DAEF81D469E380021987F /* AppDelegate.swift in Sources */,
+				D8FB0BC81D4AB7A7006BD700 /* Constants.swift in Sources */,
 				D8FB0BBC1D4A6466006BD700 /* DataStore.swift in Sources */,
 				D8FB0BC41D4A95FF006BD700 /* ProfileViewController.swift in Sources */,
 				D8FB0BC61D4AA064006BD700 /* CardStackViewController.swift in Sources */,

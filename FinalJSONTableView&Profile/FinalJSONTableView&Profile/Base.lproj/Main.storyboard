@@ -17,23 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz1-6c-De9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz1-6c-De9" customClass="CardStack" customModule="FinalJSONTableView_Profile" customModuleProvider="target">
                                 <rect key="frame" x="175" y="175" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Qh9-ll-7vF"/>
-                                    <constraint firstAttribute="width" constant="250" id="RRM-jU-JEb"/>
+                                    <constraint firstAttribute="height" constant="250" id="Zsv-QI-IVD"/>
+                                    <constraint firstAttribute="width" constant="250" id="s3z-RJ-rqP"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2b-hn-7Kw">
+                                <rect key="frame" x="277" y="485" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="jD9-5O-Zja" kind="show" id="efJ-74-Vxh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kz1-6c-De9" firstAttribute="centerY" secondItem="ZHk-Gr-KI3" secondAttribute="centerY" id="b4d-bo-a0i"/>
-                            <constraint firstItem="kz1-6c-De9" firstAttribute="centerX" secondItem="ZHk-Gr-KI3" secondAttribute="centerX" id="dk4-D5-fyx"/>
+                            <constraint firstItem="1A1-AD-n55" firstAttribute="top" secondItem="Q2b-hn-7Kw" secondAttribute="bottom" constant="85" id="auI-Jh-Tb6"/>
+                            <constraint firstItem="Q2b-hn-7Kw" firstAttribute="centerX" secondItem="ZHk-Gr-KI3" secondAttribute="centerX" id="cWM-vR-3Pp"/>
+                            <constraint firstItem="kz1-6c-De9" firstAttribute="centerX" secondItem="ZHk-Gr-KI3" secondAttribute="centerX" id="hR6-6v-xo8"/>
+                            <constraint firstItem="kz1-6c-De9" firstAttribute="centerY" secondItem="ZHk-Gr-KI3" secondAttribute="centerY" id="lha-IO-j9k"/>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="jD9-5O-Zja" kind="show" id="wxR-k9-fOU"/>
+                        <outlet property="cardStackView" destination="kz1-6c-De9" id="XVZ-8c-dXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSS-6R-3Se" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjJ-72-doK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963" y="330"/>
+            <point key="canvasLocation" x="300" y="1054"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ycS-Rj-Tl4">
@@ -179,6 +188,13 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VVh-bc-gRW">
+                                <rect key="frame" x="375" y="375" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="98°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra8-4I-fsd">
                                 <rect key="frame" x="540" y="110" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -194,12 +210,12 @@
                         <outlet property="contactInfoLabel" destination="D4f-nY-upg" id="n8Q-bH-zJj"/>
                         <outlet property="destDescriptionLabel" destination="YwV-4P-kTc" id="B0U-EB-6Z3"/>
                         <outlet property="nameLabel" destination="B6s-7o-wco" id="nLj-4V-meG"/>
-                        <outlet property="specialInfoLabel" destination="DiL-D3-GlL" id="Khw-NP-QfR"/>
+                        <outlet property="specInfoLabel" destination="DiL-D3-GlL" id="5nV-NN-gl8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZB-N2-s2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="330"/>
+            <point key="canvasLocation" x="1013" y="1054"/>
         </scene>
     </scenes>
     <resources>

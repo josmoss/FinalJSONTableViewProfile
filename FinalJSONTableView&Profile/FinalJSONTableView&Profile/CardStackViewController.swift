@@ -10,11 +10,24 @@ import UIKit
 
 class CardStackViewController: UIViewController, CardStackDelegate {
 
+    @IBOutlet weak var cardStackView: CardStack!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.cardStackView.delegate = self
+        
     }
-
+    
+    func cardInterested(dest: Destination) {
+        print("interested in \(dest.name)")
+        
+        DataStore.sharedInstance.addFavoriteDestination(dest)
+        
+    }
+    
+    func cardNotInterested(dest: Destination) {
+        print("not interested in \(dest.name)")
+    }
 
 }

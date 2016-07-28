@@ -31,15 +31,16 @@ class CardStack : UIView {
     }
     
     func seedDestinations() {
- 
-        for index in 0...14 {
-            
-            if let dest = DataStore.sharedInstance.destinationsAtIndex(index) {
-                
-                self.addDestination(dest)
+        
+        // get the maximum destinations from the datastore
+        let maxDestinations = DataStore.sharedInstance.numberOfDestinations()
+        
+        for i in 0..<maxDestinations {
+            if let d = DataStore.sharedInstance.destinationsAtIndex(i) {
+                self.addDestination(d)
             }
-            
         }
+        
     }
     
     func addDestination(destination: Destination) {

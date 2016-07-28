@@ -14,7 +14,12 @@
 		D89DAF0A1D469E6B0021987F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF091D469E6B0021987F /* ViewController.swift */; };
 		D89DAF0C1D469E850021987F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF0B1D469E850021987F /* Destination.swift */; };
 		D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF131D4804F80021987F /* FavTableViewCell.swift */; };
-		D8FB0B931D4932FA006BD700 /* destinations.json in Resources */ = {isa = PBXBuildFile; fileRef = D8FB0B921D4932FA006BD700 /* destinations.json */; };
+		D8FB0BBC1D4A6466006BD700 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BBB1D4A6466006BD700 /* DataStore.swift */; };
+		D8FB0BBE1D4A661D006BD700 /* destinations.json in Resources */ = {isa = PBXBuildFile; fileRef = D8FB0BBD1D4A661D006BD700 /* destinations.json */; };
+		D8FB0BC01D4A6D6D006BD700 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */; };
+		D8FB0BC21D4A732B006BD700 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC11D4A732B006BD700 /* CardView.swift */; };
+		D8FB0BC41D4A95FF006BD700 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC31D4A95FF006BD700 /* ProfileViewController.swift */; };
+		D8FB0BC61D4AA064006BD700 /* CardStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC51D4AA064006BD700 /* CardStackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +32,12 @@
 		D89DAF091D469E6B0021987F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D89DAF0B1D469E850021987F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		D89DAF131D4804F80021987F /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
-		D8FB0B921D4932FA006BD700 /* destinations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = destinations.json; sourceTree = "<group>"; };
+		D8FB0BBB1D4A6466006BD700 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		D8FB0BBD1D4A661D006BD700 /* destinations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = destinations.json; sourceTree = "<group>"; };
+		D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
+		D8FB0BC11D4A732B006BD700 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D8FB0BC31D4A95FF006BD700 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D8FB0BC51D4AA064006BD700 /* CardStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +76,7 @@
 				D89DAF121D4804B10021987F /* Models */,
 				D89DAF111D48049A0021987F /* Controllers */,
 				D89DAEFE1D469E380021987F /* Assets.xcassets */,
-				D8FB0B921D4932FA006BD700 /* destinations.json */,
+				D8FB0BBD1D4A661D006BD700 /* destinations.json */,
 				D89DAF001D469E380021987F /* LaunchScreen.storyboard */,
 				D89DAF031D469E380021987F /* Info.plist */,
 			);
@@ -76,7 +86,9 @@
 		D89DAF111D48049A0021987F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8FB0BC51D4AA064006BD700 /* CardStackViewController.swift */,
 				D89DAF091D469E6B0021987F /* ViewController.swift */,
+				D8FB0BC31D4A95FF006BD700 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -85,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				D89DAF0B1D469E850021987F /* Destination.swift */,
+				D8FB0BBB1D4A6466006BD700 /* DataStore.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -93,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				D89DAF131D4804F80021987F /* FavTableViewCell.swift */,
+				D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */,
+				D8FB0BC11D4A732B006BD700 /* CardView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -157,7 +172,7 @@
 			files = (
 				D89DAF021D469E380021987F /* LaunchScreen.storyboard in Resources */,
 				D89DAEFF1D469E380021987F /* Assets.xcassets in Resources */,
-				D8FB0B931D4932FA006BD700 /* destinations.json in Resources */,
+				D8FB0BBE1D4A661D006BD700 /* destinations.json in Resources */,
 				D89DAEFD1D469E380021987F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,9 +184,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FB0BC21D4A732B006BD700 /* CardView.swift in Sources */,
 				D89DAF0A1D469E6B0021987F /* ViewController.swift in Sources */,
 				D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */,
+				D8FB0BC01D4A6D6D006BD700 /* CardStack.swift in Sources */,
 				D89DAEF81D469E380021987F /* AppDelegate.swift in Sources */,
+				D8FB0BBC1D4A6466006BD700 /* DataStore.swift in Sources */,
+				D8FB0BC41D4A95FF006BD700 /* ProfileViewController.swift in Sources */,
+				D8FB0BC61D4AA064006BD700 /* CardStackViewController.swift in Sources */,
 				D89DAF0C1D469E850021987F /* Destination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     typealias JSONDictionary = [String:AnyObject]
     typealias JSONArray = [JSONDictionary]
     
-    var destinationArray = [Destination]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -112,7 +110,8 @@ class ViewController: UIViewController {
                                     print("I couldn't parse the charge.")
                                 }
                                 
-                                self.destinationArray.append(theDestination)
+                                DataStore.sharedInstance.addFavoriteDestination(theDestination)
+                                
                             }
                         }
                     }
@@ -124,9 +123,9 @@ class ViewController: UIViewController {
             
         }
         
-        print(destinationArray.count)
+        print(destinationsArray.count)
         
-        for theDestination in destinationArray
+        for theDestination in destinationsArray
         {
             
             print(theDestination.name)
@@ -151,25 +150,23 @@ class ViewController: UIViewController {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.destinationArray.count
+        return DataStore.sharedInstance.favoriteNumberOfDestinations()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FavTableViewCell
         
-        let destination = self.destinationArray[indexPath.row]
+        let destination = DataStore.sharedInstance.favoriteAtIndex(indexPath.row)
         
-//        cell.featureImageView.image = UIImage(named: "zion_1")
-        
-//        cell.imageView?.image = UIImage(named:"zion_1.jpg")
-        
-        cell.nameLabel.text = destination.name
+        cell.nameLabel.text = destination?.name
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.currentDestination = DataStore.sharedInstance.favoriteAtIndex(indexPath.row)
         
         self.performSegueWithIdentifier("ProfileSegue", sender: nil)
         
@@ -177,6 +174,13 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProfileSegue" {
+            
+            if let controller = segue.destinationViewController as? ProfileViewController {
+                controller.theDestination = self.currentDestination
+                
+            } else {
+                print("Not the correct segue")
+            }
             
         }
         

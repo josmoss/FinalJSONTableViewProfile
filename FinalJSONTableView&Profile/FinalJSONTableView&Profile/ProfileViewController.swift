@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var destDescriptionLabel: UILabel!
+    @IBOutlet weak var destDescription: UITextView!
     @IBOutlet weak var contactInfoLabel: UILabel!
     @IBOutlet weak var chargeLabel: UILabel!
     @IBOutlet weak var specInfoLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     var theDestination : Destination?
     
@@ -24,11 +25,40 @@ class ProfileViewController: UIViewController {
         if let destination = self.theDestination {
             
             self.nameLabel.text = destination.name
-            self.destDescriptionLabel.text = destination.destDescription
+            self.destDescription.text = destination.destDescription
             self.contactInfoLabel.text = destination.contactInfo
             self.chargeLabel.text = destination.charge
             self.specInfoLabel.text = destination.specInfo
+        
+            for imgString in destination.imagesArray {
+               // print(imgString)
+        
+    
+            }
+            
         }
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        let images = theDestination?.imagesArray
+        
+        return images!.count 
+
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
+        
+        let images = theDestination?.imagesArray
+        
+        let image = images![indexPath.row]
+        
+        cell.imageView.image = UIImage(named: image.imageName)
+ 
+        
+        return cell
     }
 
 }

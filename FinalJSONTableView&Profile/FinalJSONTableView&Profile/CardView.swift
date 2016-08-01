@@ -11,7 +11,7 @@ import UIKit
 class CardView: UIView {
     var destination : Destination! {
         didSet {
-            
+
             imageView.image = destination.image
             nameLabel.text = destination.name
 

@@ -8,20 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     var destinationsArray = [Destination]()
     var favDestination = Destination()
     var currentDestination : Destination?
     
     @IBOutlet weak var tableView: UITableView!
-    
-       
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-                
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -34,6 +27,7 @@ class ViewController: UIViewController {
         
         let destination = DataStore.sharedInstance.favoriteAtIndex(indexPath.row)
         
+         cell.featureImageView.image = destination?.image
         cell.nameLabel.text = destination?.name
         
         return cell

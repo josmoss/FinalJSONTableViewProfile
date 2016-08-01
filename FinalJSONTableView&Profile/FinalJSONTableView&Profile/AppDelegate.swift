@@ -60,11 +60,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     
                                     for imageDict in imagesArray {
                                         
+                                        let images = destImage(dict: imageDict)
+                                        
+                                        theDestination.imagesArray.append(images)
+                                        
                                         if let imageString = imageDict["imageName"] as? String {
                                             
-                                            theDestination.imagesArray.append(imageString)
+                                           // theDestination.imagesArray.append(imageString)
+                                            
+                                            images.imageName = imageString
+                                           // print(imageString)
                                             
                                         }
+                                        else {
+                                            print("Bad Image")
+                                        }
+
+                                           // theDestination.imagesArray.append(imageString)
+    
                                         
                                     }
                                     

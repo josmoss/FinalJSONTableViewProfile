@@ -12,7 +12,7 @@ class Destination: NSObject {
     
     var name: String = ""
     var destDescription: String = ""
-    var imagesArray = [String]()
+    var imagesArray = [destImage]()
     var contactInfo: String = ""
     var specInfo: String = ""
     var category: String = ""
@@ -21,7 +21,13 @@ class Destination: NSObject {
     var charge: String = ""
     
     var image : UIImage {
-        return UIImage(named: self.imagesArray[0])!
+        
+       let image = imagesArray.first
+        
+        print(image!.imageName)
+        
+         return UIImage(named: image!.imageName)!
+
     }
     
     override init() {

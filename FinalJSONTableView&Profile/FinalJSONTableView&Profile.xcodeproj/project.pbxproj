@@ -17,6 +17,7 @@
 		D89DAF0A1D469E6B0021987F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF091D469E6B0021987F /* ViewController.swift */; };
 		D89DAF0C1D469E850021987F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF0B1D469E850021987F /* Destination.swift */; };
 		D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF131D4804F80021987F /* FavTableViewCell.swift */; };
+		D8C4445A1D51135B006F6A0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C444591D51135B006F6A0C /* MapViewController.swift */; };
 		D8FB0BBC1D4A6466006BD700 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BBB1D4A6466006BD700 /* DataStore.swift */; };
 		D8FB0BC01D4A6D6D006BD700 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */; };
 		D8FB0BC21D4A732B006BD700 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC11D4A732B006BD700 /* CardView.swift */; };
@@ -38,6 +39,7 @@
 		D89DAF091D469E6B0021987F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D89DAF0B1D469E850021987F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		D89DAF131D4804F80021987F /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
+		D8C444591D51135B006F6A0C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D8FB0BBB1D4A6466006BD700 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		D8FB0BC11D4A732B006BD700 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				D8FB0BC51D4AA064006BD700 /* CardStackViewController.swift */,
 				D89DAF091D469E6B0021987F /* ViewController.swift */,
 				D8FB0BC31D4A95FF006BD700 /* ProfileViewController.swift */,
+				D8C444591D51135B006F6A0C /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				D8FB0BC01D4A6D6D006BD700 /* CardStack.swift in Sources */,
 				D89DAEF81D469E380021987F /* AppDelegate.swift in Sources */,
 				D88822101D4FEDCE00A266EA /* destImage.swift in Sources */,
+				D8C4445A1D51135B006F6A0C /* MapViewController.swift in Sources */,
 				D8FB0BC81D4AB7A7006BD700 /* Constants.swift in Sources */,
 				D8FB0BBC1D4A6466006BD700 /* DataStore.swift in Sources */,
 				D8FB0BC41D4A95FF006BD700 /* ProfileViewController.swift in Sources */,

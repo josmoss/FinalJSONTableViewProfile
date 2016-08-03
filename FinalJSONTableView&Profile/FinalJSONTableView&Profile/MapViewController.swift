@@ -11,7 +11,8 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapDestView: MKMapView!
+
     
     var theMap: Destination!
     
@@ -28,29 +29,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.centerMapOnLocation(initialLocation)
     }
     
-    let regionRadius: CLLocationDistance = 80000
+    let regionRadius: CLLocationDistance = 70000
         
     func centerMapOnLocation(location: CLLocation) {
         
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         
-        mapView.setRegion(coordinateRegion, animated: true)
+        mapDestView.setRegion(coordinateRegion, animated: true)
         
     }
     
-    func addPin(latitude: Double, longitude: Double, titleString: String) {
-        
-        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = location
-        annotation.title = titleString
-        
-        self.mapView.addAnnotation(annotation)
-        
-    }
-        
     func addCustomPin(lat: Double, long: Double, titleString: String) {
         
         let location = CLLocationCoordinate2D(
@@ -58,16 +46,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             longitude: theMap.longitude
             )
         
+        print("custom pin added")
+        
         let customAnnotation = CustomMKPointAnnotation()
         
         customAnnotation.coordinate = location
         customAnnotation.title = theMap.name
         
-        self.mapView.addAnnotation(customAnnotation)
+        self.mapDestView.addAnnotation(customAnnotation)
         
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        print("view for annotation called")
         
         if annotation.isKindOfClass(CustomMKPointAnnotation) {
             
@@ -83,7 +75,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotationView.canShowCallout = true
             
             let imageView = UIImageView(frame: CGRectMake(0, 0, 44, 44))
-            imageView.image = UIImage(named: "mapPins")
+            imageView.image = UIImage(named: "mapPin")
             
             annotationView.image = imageView.image
             
@@ -94,5 +86,32 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return nil
         
     }
-    
+//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+//        // Don't want to show a custom image if the annotation is the user's location.
+//        guard !annotation.isKindOfClass(MKUserLocation) else {
+//            return nil
+//        }
+//        
+//        let annotationIdentifier = "AnnotationIdentifier"
+//        
+//        var annotationView: MKAnnotationView?
+//        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(annotationIdentifier) {
+//            annotationView = dequeuedAnnotationView
+//            annotationView?.annotation = annotation
+//        }
+//        else {
+//            let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+//            av.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+//            annotationView = av
+//        }
+//        
+//        if let annotationView = annotationView {
+//            // Configure your annotation view here
+//            annotationView.canShowCallout = true
+//            annotationView.image = UIImage(named: "mapPin")
+//            
+//        }
+//        
+//        return annotationView
+//    }
 }

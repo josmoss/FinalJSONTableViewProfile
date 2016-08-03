@@ -10,5 +10,5 @@ import MapKit
 
 class CustomMKPointAnnotation: MKPointAnnotation {
 
-    var imageName : String = ""
+//    var imageName : String = ""
 }

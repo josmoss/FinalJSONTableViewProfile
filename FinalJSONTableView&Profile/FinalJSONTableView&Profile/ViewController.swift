@@ -37,17 +37,19 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         self.currentDestination = DataStore.sharedInstance.favoriteAtIndex(indexPath.row)
         
-        self.performSegueWithIdentifier("ProfileSegue", sender: nil)
+        self.performSegueWithIdentifier("proSegue", sender: nil)
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ProfileSegue" {
+        
+        if segue.identifier == "proSegue" {
             
             if let controller = segue.destinationViewController as? ProfileViewController {
                 controller.theDestination = self.currentDestination
                 
             } else {
+                
                 print("Not the correct segue")
             }
             

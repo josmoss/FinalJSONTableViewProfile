@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             self.specInfoLabel.text = destination.specInfo
         
             for imgString in destination.imagesArray {
-               print(imgString)
+              // print(imgString)
         
             }
             
@@ -41,8 +41,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         let images = theDestination?.imagesArray
-        
-        return images!.count 
+ 
+        return images!.count
 
     }
     
@@ -56,8 +56,28 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         cell.imageView.image = UIImage(named: image.imageName)
  
-        
         return cell
+    }
+    
+    @IBAction func buttonTapped(sender: UIButton) {
+        
+        performSegueWithIdentifier("showMap", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showMap" {
+            
+            if let controller = segue.destinationViewController as? MapViewController {
+                
+                controller.theMap = self.theDestination
+                
+            } else {
+                print("Not the correct segue")
+            }
+            
+        }
+        
     }
 
 }

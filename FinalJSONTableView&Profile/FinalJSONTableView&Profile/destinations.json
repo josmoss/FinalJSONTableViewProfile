@@ -36,8 +36,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Zion's can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime.",
 		"category": "Park",
-		"latitude": 112.59,
-		"longitude": 37.12,
+		"latitude": 37.298202,
+		"longitude": -113.026300,
 		"charge": "$25.00 per car per week."
 	},{
 		"name": "Arches National Park",
@@ -76,8 +76,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Arches can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime. Stay on trails to protect fragile desert ecosystems. Use caution when hiking through the park as sandstone rock crumbles easily.",
 		"category": "Park",
-		"latitude": 109.34,
-		"longitude": 38.41,
+		"latitude": 38.733081,
+		"longitude": -109.592514,
 		"charge": "$10.00 per car per week."
 	},{
 		"name": "Canyonlands National Park",
@@ -116,8 +116,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Canyonlands can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime. Use caution near cliff edges and when walking on slickrock.",
 		"category": "Park",
-		"latitude": 109.45,
-		"longitude": 38.10,
+		"latitude": 38.326869,
+		"longitude": -109.878259,
 		"charge": "$10.00 fee per non-commercial vehicle for 7 days. $5 fee per individual motorcyclist, bicyclist, or walk-in hiker for 7 days."
 	},{
 		"name": "Bryce Canyon National Park",
@@ -156,8 +156,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "",
 		"category": "Park",
-		"latitude": 112.10,
-		"longitude": 37.37,
+		"latitude": 37.593038,
+		"longitude": -112.187090,
 		"charge": "$25.00 per car per week."
 	},{
 		"name": "Capitol Reef National Park",
@@ -196,8 +196,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Capitol Reef can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime.",
 		"category": "Park",
-		"latitude": 111.10,
-		"longitude": 38.12,
+		"latitude": 38.366970,
+		"longitude": -111.261504,
 		"charge": "$5.00 to $10.00 per vehicle per week (Scenic Drive Only). $3.00 to $7.00 per person rate."
 	},{
 		"name": "Glen Canyon National Recreation Area/Lake Powell",
@@ -236,8 +236,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Zion's can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime.",
 		"category": "Park",
-		"latitude": 110.52,
-		"longitude": 37.15,
+		"latitude": 37.522213,
+		"longitude": -110.721532,
 		"charge": "$25.00 per non-commercial vehicle per week. $12.00 per person per week."
 	},{
 		"name": "Monument Valley",
@@ -276,8 +276,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Monument Valley can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime. Monument Valley is a Navajo Tribal park, not a U",
 		"category": "Park",
-		"latitude": 110.06,
-		"longitude": 36.59,
+		"latitude": 37.004245,
+		"longitude": -110.173478,
 		"charge": "$20.00 per car (up to 4 persons per car, $10.00 per additional person) for access to the loop road through the valley."
 	},{
 		"name": "Grand Staircase-Escalante National Monument",
@@ -316,8 +316,8 @@
 		"contactInformation": "Park Website",
 		"specialInformation": "Summer temperatures in Grand Staircase-Escalante can exceed 100F. Be sure to carry water when hiking, at least 1 gallon per day per person in the summertime.",
 		"category": "Park",
-		"latitude": 111.41,
-		"longitude": 37.24,
+		"latitude": 37.442322,
+		"longitude": -111.666072,
 		"charge": "$5.00 Daily Use Fee (Calf Creek Recreation Area)."
 	}]
 }

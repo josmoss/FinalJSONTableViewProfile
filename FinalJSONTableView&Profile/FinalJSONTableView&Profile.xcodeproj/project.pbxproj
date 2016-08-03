@@ -18,6 +18,8 @@
 		D89DAF0C1D469E850021987F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF0B1D469E850021987F /* Destination.swift */; };
 		D89DAF141D4804F80021987F /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DAF131D4804F80021987F /* FavTableViewCell.swift */; };
 		D8C4445A1D51135B006F6A0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C444591D51135B006F6A0C /* MapViewController.swift */; };
+		D8C4445C1D51234E006F6A0C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C4445B1D51234E006F6A0C /* MapKit.framework */; };
+		D8EC69131D5190510031E72E /* CustomMKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC69121D5190510031E72E /* CustomMKPointAnnotation.swift */; };
 		D8FB0BBC1D4A6466006BD700 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BBB1D4A6466006BD700 /* DataStore.swift */; };
 		D8FB0BC01D4A6D6D006BD700 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */; };
 		D8FB0BC21D4A732B006BD700 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB0BC11D4A732B006BD700 /* CardView.swift */; };
@@ -40,6 +42,8 @@
 		D89DAF0B1D469E850021987F /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		D89DAF131D4804F80021987F /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 		D8C444591D51135B006F6A0C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D8C4445B1D51234E006F6A0C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8EC69121D5190510031E72E /* CustomMKPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMKPointAnnotation.swift; sourceTree = "<group>"; };
 		D8FB0BBB1D4A6466006BD700 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		D8FB0BC11D4A732B006BD700 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C4445C1D51234E006F6A0C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 		D89DAEEB1D469E380021987F = {
 			isa = PBXGroup;
 			children = (
+				D8C4445B1D51234E006F6A0C /* MapKit.framework */,
 				D89DAEF61D469E380021987F /* FinalJSONTableView&Profile */,
 				D89DAEF51D469E380021987F /* Products */,
 			);
@@ -118,6 +124,7 @@
 			children = (
 				D89DAF131D4804F80021987F /* FavTableViewCell.swift */,
 				D888220D1D4FBB8200A266EA /* CollectionViewCell.swift */,
+				D8EC69121D5190510031E72E /* CustomMKPointAnnotation.swift */,
 				D8FB0BBF1D4A6D6D006BD700 /* CardStack.swift */,
 				D8FB0BC11D4A732B006BD700 /* CardView.swift */,
 			);
@@ -156,6 +163,11 @@
 				TargetAttributes = {
 					D89DAEF31D469E380021987F = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -208,6 +220,7 @@
 				D8FB0BC41D4A95FF006BD700 /* ProfileViewController.swift in Sources */,
 				D8FB0BC61D4AA064006BD700 /* CardStackViewController.swift in Sources */,
 				D89DAF0C1D469E850021987F /* Destination.swift in Sources */,
+				D8EC69131D5190510031E72E /* CustomMKPointAnnotation.swift in Sources */,
 				D888220E1D4FBB8200A266EA /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -89,15 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				D89DAEF71D469E380021987F /* AppDelegate.swift */,
-				D8FB0BC71D4AB7A7006BD700 /* Constants.swift */,
 				D89DAEFB1D469E380021987F /* Main.storyboard */,
 				D8FB0B8B1D485F3D006BD700 /* View */,
 				D89DAF121D4804B10021987F /* Models */,
 				D89DAF111D48049A0021987F /* Controllers */,
-				D89DAEFE1D469E380021987F /* Assets.xcassets */,
-				D888220B1D4F179200A266EA /* destinations.json */,
-				D89DAF001D469E380021987F /* LaunchScreen.storyboard */,
-				D89DAF031D469E380021987F /* Info.plist */,
+				D8EC69181D52B25F0031E72E /* Supporting Files */,
 			);
 			path = "FinalJSONTableView&Profile";
 			sourceTree = "<group>";
@@ -123,6 +119,18 @@
 				D8FB0BBB1D4A6466006BD700 /* DataStore.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D8EC69181D52B25F0031E72E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8FB0BC71D4AB7A7006BD700 /* Constants.swift */,
+				D89DAEFE1D469E380021987F /* Assets.xcassets */,
+				D888220B1D4F179200A266EA /* destinations.json */,
+				D89DAF001D469E380021987F /* LaunchScreen.storyboard */,
+				D89DAF031D469E380021987F /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D8FB0B8B1D485F3D006BD700 /* View */ = {

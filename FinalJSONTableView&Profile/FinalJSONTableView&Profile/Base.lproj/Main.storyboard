@@ -224,7 +224,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra8-4I-fsd">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra8-4I-fsd">
                                 <rect key="frame" x="540" y="20" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -334,6 +334,7 @@
                         <outlet property="destDescription" destination="VVh-bc-gRW" id="me5-AF-FXk"/>
                         <outlet property="nameLabel" destination="B6s-7o-wco" id="nLj-4V-meG"/>
                         <outlet property="specInfoLabel" destination="DiL-D3-GlL" id="5nV-NN-gl8"/>
+                        <outlet property="tempLabel" destination="Ra8-4I-fsd" id="Gyk-UJ-ulJ"/>
                         <segue destination="Z0P-iA-zJY" kind="show" identifier="showMap" id="hQe-cR-964"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+//    var locationsArray = [Destination()]
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -70,6 +72,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                             
                                             images.imageName = imageString
                                            // print(imageString)
+                                            
+//                                            locationsArray.append(theDestination)
+                                            
+                                            // Weather API using the locationsArray a for loop and loop each destination latitude and longitude into the api call 
+                                            
+                                            // for location in locationsArray {
+                                            // nsurlSession.url(weather.com/lat/longitude 
+                                            //
+                                            // }
                                             
                                         }
                                         else {

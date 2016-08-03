@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var contactInfoLabel: UILabel!
     @IBOutlet weak var chargeLabel: UILabel!
     @IBOutlet weak var specInfoLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
 
     var theDestination : Destination?
@@ -62,21 +63,15 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
               print(theWeather.icon)
               print(theWeather.temperature)
         
-//        dispatch_async(dispatch_get_main_queue(), {
-//            
-//            // Updating the UI
-//            self.cityLabel.text = self.theCity?.name
-//            
-//            let temp = Int(theWeather.temperature)
-//            
-//            self.temperatureLabel.text = "\(temp)"
-//            self.humidityLabel.text = "\(theWeather.humidity)"
-//            self.summaryLabel.text = "\(theWeather.summary)"
-//            
-//            self.currentImageView.image = UIImage(named: theWeather.icon)
-//            print(theWeather.icon)
-//            
-//        })
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            // Updating the UI
+            
+            let temp = Int(theWeather.temperature)
+            
+            self.tempLabel.text = "\(temp)"
+
+        })
         
     }
     

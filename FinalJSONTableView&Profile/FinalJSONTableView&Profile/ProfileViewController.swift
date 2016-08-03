@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+protocol WeatherDelegate : class {
+    func passWeather(theWeather: Weather)
+}
+
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, WeatherDelegate {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var destDescription: UITextView!
@@ -18,7 +22,15 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
 
     var theDestination : Destination?
+    var theWeather : Weather?
+    let apiController = WeatherAPIController()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.apiController.delegate = self
+        
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -33,9 +45,39 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             for imgString in destination.imagesArray {
               // print(imgString)
         
+            if let weather = self.theDestination {
+                    
+                let latlong = "\(weather.latitude)" + "," + "\(weather.longitude)"
+                        
+                        apiController.fetchWeather(latlong)
+                }
             }
             
         }
+    }
+    
+    func passWeather(theWeather: Weather) {
+        //      implement the Weather user interface
+        
+              print(theWeather.icon)
+              print(theWeather.temperature)
+        
+//        dispatch_async(dispatch_get_main_queue(), {
+//            
+//            // Updating the UI
+//            self.cityLabel.text = self.theCity?.name
+//            
+//            let temp = Int(theWeather.temperature)
+//            
+//            self.temperatureLabel.text = "\(temp)"
+//            self.humidityLabel.text = "\(theWeather.humidity)"
+//            self.summaryLabel.text = "\(theWeather.summary)"
+//            
+//            self.currentImageView.image = UIImage(named: theWeather.icon)
+//            print(theWeather.icon)
+//            
+//        })
+        
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
